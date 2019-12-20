@@ -27,6 +27,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
+Client Side Routing provides a more pleasant user experience and *can* reduce the network utilization compared to server side routing.
+
 > Answer:
 
 ## Project Set Up
