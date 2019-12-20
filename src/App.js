@@ -5,6 +5,8 @@ import Nav from './components/Nav'
 import WelcomePage from './components/WelcomePage'
 import CharacterList from './components/CharacterList'
 import SearchForm from './components/SearchForm'
+import SearchCard from './components/SearchCard'
+import SearchResult from './components/SearchResult'
 
 export default function App() {
   return (
@@ -19,6 +21,9 @@ export default function App() {
         </Route>
         <Route exact path='/search'>
           <SearchForm />
+        </Route>
+        <Route exact path='/character/:id'>
+          <SearchResult />
         </Route>
       </Container>
     </>
