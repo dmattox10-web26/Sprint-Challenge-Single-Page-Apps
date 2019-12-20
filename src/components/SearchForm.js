@@ -13,11 +13,18 @@ export default function SearchForm() {
   useEffect(() => {
     axios.get('https://rickandmortyapi.com/api/character/')
       .then(res => {
-        updateCharacters(res.data.results)
+        for (let i = 1; i <= res.data.info.pages; i++ ) {
+          axios.get(`https://rickandmortyapi.com/api/character/?page=${i}`)
+          .then(res => {
+            console.log(res)
+            updateCharacters(exisitingCharacters => [...exisitingCharacters, ...res.data.results])
+          })
+        }
       })
   }, [])
 
   useEffect(() => {
+    console.log(characters)
     const results = characters.filter(character =>
       character.name.toLowerCase().includes(term.toLowerCase())
     );
