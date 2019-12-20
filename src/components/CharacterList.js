@@ -12,7 +12,7 @@ export default function CharacterList() {
         updateCharacters(res.data.results)
       })
   }, [])
-  console.log(characters)
+  
   return (
     <section className='character-list'>
       {characters.map(character => 
